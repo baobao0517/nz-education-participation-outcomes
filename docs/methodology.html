@@ -1,0 +1,64 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Methodology | NZ Education Insights</title><style>
+:root{color-scheme:light}*{box-sizing:border-box}body{background:#f5f8f9;color:#253749;margin:0;font:15px/1.75 system-ui,-apple-system,'Segoe UI',sans-serif}header{background:#142b3f;color:white;padding:18px 0}header a{color:#d6f4ef;text-decoration:none;font-weight:700}main{max-width:900px;margin:32px auto 65px;padding:42px 54px;background:white;border:1px solid #e0e8eb;border-radius:15px;box-shadow:0 6px 25px #142b3f0c}h1,h2,h3{color:#142b3f;line-height:1.2;letter-spacing:-.025em}h1{font-size:36px}h2{font-size:24px;margin-top:40px;padding-top:15px;border-top:1px solid #e2ecee}h3{font-size:18px;margin-top:25px}a{color:#078d91;text-underline-offset:3px}p{margin:14px 0}table{border-collapse:collapse;width:100%;margin:20px 0;font-size:13px;overflow-x:auto;display:block}th,td{text-align:left;padding:10px 12px;border-bottom:1px solid #e4eded;vertical-align:top}th{background:#f0f7f6;color:#285d65;font-size:12px}blockquote{margin:20px 0;border-left:3px solid #078d91;padding:5px 15px;background:#f1f8f7}code{font:13px/1.55 ui-monospace,monospace;background:#edf3f5;border-radius:4px;padding:2px 5px}pre{background:#eaf2f5;padding:17px;border-radius:8px;overflow-x:auto}pre code{padding:0}li{margin:6px 0}strong{color:#163247}footer{color:#697b86;font-size:12px;margin:20px 0}.wrap{width:min(94%,1000px);margin:auto}@media(max-width:650px){main{padding:23px 20px;margin:15px 10px}h1{font-size:29px}h2{font-size:22px}}
+</style></head><body><header><div class="wrap"><a href="./index.html">← NZ Education Insights · Interactive Dashboard</a></div></header><main><h1>Methodology &amp; Metric Definitions</h1>
+<h2>1. Analytical design</h2>
+<p>This is a <strong>descriptive, cross-sectional and time-series regional analysis</strong>, not a policy impact evaluation. All 16 New Zealand Regional Councils are compared. The central question concerns <strong>persistent disadvantage in participation and attainment and the allocation of further investigative attention</strong>, not assigning school or community blame.</p>
+<p><strong>Stage 1 (Participation):</strong> 2022–2026 Term 2 regular-attendance trends; 2026 as the current view.<br />
+<strong>Stage 2 (Outcomes):</strong> 2019–2025 school-leaver NCEA L2+ attainment, and 2025 equity, age and ethnic subgroup diagnostics.<br />
+<strong>Stage 3 (Integrated):</strong> 2025 Term 2 attendance compared with 2025 L2+ school-leaver attainment, for the same 16 Regional Councils, but <strong>not the same students</strong>.</p>
+<h2>2. Regular Attendance</h2>
+<p><strong>Definition:</strong> % of eligible students attending <strong>more than 90%</strong> of Term 2, where attendance is measured in half-days (per official Education Counts). This is a strict <em>threshold measure</em>, not the overall fraction of school days attended.</p>
+<p><code>regular attendance (%) = 100 × regular-attending students / eligible students</code></p>
+<p>Only <strong>Term 2</strong> is used for year-on-year comparisons to control for differing term effects and to take advantage of the established official Term 2 series. Term 2 2026 is the most recent fully published term at preparation time; Term 3 2026 results were <strong>provisional</strong>, not mixed into this analysis. The dataset uses state and state-integrated attendance statistics as defined by the official source.</p>
+<p>For any region <code>r</code> and year <code>t</code>:</p>
+<ul>
+<li><code>gap_att_pp(r,t) = rate_att(r,t) − rate_att(NZ,t)</code> (same-year national comparison).</li>
+<li><code>annual_change_pp(r,t) = rate_att(r,t) − rate_att(r,t−1)</code>.</li>
+<li><code>avg_annual_improvement_pp_year(r) = [rate_att(r,2026) − rate_att(r,2022)] / 4</code>.</li>
+<li><code>years_below_NZ_2022_2026(r) = count of years where gap_att_pp(r,t) &lt; 0</code>.</li>
+<li><code>average_5y_gap(r) = mean of annual gap_att_pp(r,t) over 2022–2026</code>.</li>
+</ul>
+<p>All percentage-point (pp) calculations are arithmetic differences between percentages, <strong>not percentage relative growth</strong>. Published attendance percentages are rounded to one decimal; count-derived ratios are checked against them (0.07 pp tolerance). The national trend is a student-weighted national aggregate, <strong>not the unweighted mean of 16 regional rates</strong>. A higher starting level leaves less headroom for improvement.</p>
+<p><strong>2026 regional matrix</strong> plots latest Term 2 attendance level vs average annual pp improvement. Horizontal/vertical comparison lines use national 2026 attendance and national 2022–26 annual improvement. No quadrant is a formal performance grade.</p>
+<p><strong>Target:</strong> The national government's target is <strong>80% regular attendance by 2030</strong>. The target is shown as a reference only—not as the expectation for 2026 or a forecast.</p>
+<h2>3. School-leaver NCEA Level 2+ attainment</h2>
+<p><strong>Definition:</strong> percentage of school leavers who have achieved NCEA Level 2 or above, or specified equivalent qualifications, by the reporting cutoff. Not a single exam score and not a share of the currently enrolled school population. School-leaver statistics also include valid equivalent qualification pathways (including IB / Cambridge under the source definition).</p>
+<p><code>attainment (%) = 100 × leavers with NCEA L2+ or equivalent / all school leavers in the matching reporting group</code></p>
+<p>The official machine-readable CSV includes one <code>All Leavers</code> ethnicity row per unique leaver group <em>as a category</em>, as well as separate total-response ethnic categories. For distinct school-leaver totals, the code filters <code>Student: Ethnic Group = 'All Leavers'</code> <strong>before summing</strong>. For ethnicity-specific rates it filters a <strong>single</strong> named ethnicity, never sums across ethnicities. The achieved category is <code>Qualification: Level 2 or Above = 'NCEA Level 2 or above'</code> and both qualification categories form the denominator.</p>
+<ul>
+<li><code>gap_ncea_pp(r,t) = NCEA_L2plus(r,t) − NCEA_L2plus(NZ,t)</code>.</li>
+<li><code>years_below_NZ_2019_2025(r) = count of seven years where same-year gap_ncea_pp &lt; 0</code>.</li>
+<li><code>average_7y_gap(r) = mean of same-year gaps over 2019–2025</code>.</li>
+</ul>
+<p>Use <strong>NCEA L2+</strong> as the sole primary outcome KPI. NCEA Level 3+ and retention statistics are <em>context</em> for follow-up discussions only and are not mixed into the headline regional performance score.</p>
+<h2>4. National comparison: the crucial regional attribution issue</h2>
+<p>In 2025, the national official school-leaver figures reconcile to <strong>70,786 leavers</strong>, <strong>55,062 achieving L2+</strong> → <strong>77.8%</strong>. These include <strong>6,045 leavers</strong> recorded with Regional Council <code>Not Applicable</code>, of whom <strong>2,560</strong> achieved L2+ (42.35%). The 16 attributable regions contain <strong>64,741 leavers</strong>, <strong>52,502 achieving L2+</strong>, for a pooled 16-region rate of <strong>81.1%</strong>.</p>
+<p><strong>Reporting rule:</strong> the official nationwide <strong>77.8%</strong> is the primary benchmark on the 2025 integrated quadrant and regional ranking. Do not add a competing green regional-only benchmark to the main visual. The <strong>81.1%</strong> attributable-region pool is retained in the technical notes and used solely as the comparator for <strong>within-group</strong> analyses that also exclude region-unattributable records. This avoids silently mixing incompatible geographic populations.</p>
+<p>A region only 0.3 pp above all-NZ (e.g. Bay of Plenty) is <strong>not</strong> labelled successful. Quads are heuristic and not statistical significance thresholds.</p>
+<h2>5. 2025 school EQI, ethnicity and leaving-age subgroups</h2>
+<ul>
+<li><strong>School Equity Index (EQI):</strong> three official groups <strong>Fewer / Moderate / More</strong> barriers plus <code>Unassigned</code>. They describe the <strong>average socioeconomic barriers faced by learners at a school</strong>, not personal characteristics or school quality. Group <em>composition shares</em> sum to 100% including Unassigned, but <strong>within-group NCEA percentages do not</strong>.</li>
+<li><strong>Ethnicity:</strong> total response; each school leaver may appear in more than one named ethnic group. Within-group rates use each group's denominator. Do <strong>not</strong> sum ethnicity counts or compare across groups as if they were mutually exclusive. n&lt;30 rates are withheld in the interactive explorer, and counts are provided for other subgroups.</li>
+<li><strong>Leaving age:</strong> <code>Left before 17th birthday</code> vs <code>Stayed until age 17 or above</code>. These are mutually exclusive. Earlier leaving is strongly connected with having less time to earn qualifications; this alone does not isolate an independent effect.</li>
+</ul>
+<p><strong>Within-group comparison:</strong> <code>region_group_rate − pooled_16_council_same_group_rate</code>, with the pool formed from count numerators and denominators, not a simple average of percentages. These are unadjusted descriptive comparisons and can reflect subgroup composition, school selection, local programmes and other unmeasured influences.</p>
+<h2>6. 2025 integrated quadrant</h2>
+<ul>
+<li>X-axis = <code>attendance(r,2025 Term 2) − attendance(NZ,2025 Term 2)</code> (national <strong>58.4%</strong>).</li>
+<li>Y-axis = <code>NCEA_L2plus(r,2025 leavers) − NCEA_L2plus(NZ,2025 leavers)</code> (national <strong>77.8%</strong>).</li>
+<li>Four visual regimes: both below, attendance below / NCEA above, attendance above / NCEA below, both above; a value exactly 0 is treated as <em>on the baseline</em>, not forced into a quadrant.</li>
+<li>Display <strong>only official zero-reference lines</strong>. Interpret any point close to an axis with caution, especially given the geographical attribution sensitivity of the NCEA benchmark.</li>
+</ul>
+<p>Pairing 2025 and 2025 improves calendar comparability but <strong>does not create a matched cohort</strong>. The results are region-level ecological associations. No student-level linkage, causal model, policy efficacy estimate, or p-value from the 16 regional observations is reported.</p>
+<h2>7. Data constraints and responsible interpretation</h2>
+<ol>
+<li><strong>Different populations:</strong> Attendance covers eligible students enrolled in Term 2. NCEA covers people <em>leaving school</em> that year.</li>
+<li><strong>Different reference windows:</strong> 2026 attendance is a current snapshot; 2025 NCEA is the latest published outcomes. Do not pair 2026 attendance as if outcomes from the same cohort were known.</li>
+<li><strong>Changing measurement rules:</strong> attendance codes and reporting were updated from Term 1 2025, with periodic retrospective revisions; NCEA qualification requirements also evolved. Do not attribute changes directly to particular events.</li>
+<li><strong>Unadjusted regional comparisons:</strong> regional rates are influenced by size, school mix, mobility, demographics and factors not controlled for.</li>
+<li><strong>Small cells and school-level confidentiality:</strong> display suppression for subgroup n&lt;30; no individual student or school-level release in this project.</li>
+<li><strong>Association ≠ causation:</strong> low participation and attainment appearing together does not establish which factor explains the other.</li>
+<li><strong>Policy learning requires evaluation:</strong> past reported practices may motivate evaluation, but attribution to a strategy requires evidence of implementation, suitable comparison and outcome measurement.</li>
+</ol>
+<p><strong>Source definitions:</strong> <a href="https://www.educationcounts.govt.nz/statistics/attendance">Regular Attendance</a> · <a href="https://www.educationcounts.govt.nz/statistics/school-leavers">School leavers and NCEA L2+</a> · <a href="https://www.educationcounts.govt.nz/data-services/code-sets-and-classifications/the-equity-index">School Equity Index</a></p>
+<footer>Independent education analytics portfolio · Data as of 11 November 2026 · Source: Education Counts / Ministry of Education</footer></main></body></html>

@@ -1,0 +1,110 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Data Validation | NZ Education Insights</title><style>
+:root{color-scheme:light}*{box-sizing:border-box}body{background:#f5f8f9;color:#253749;margin:0;font:15px/1.75 system-ui,-apple-system,'Segoe UI',sans-serif}header{background:#142b3f;color:white;padding:18px 0}header a{color:#d6f4ef;text-decoration:none;font-weight:700}main{max-width:900px;margin:32px auto 65px;padding:42px 54px;background:white;border:1px solid #e0e8eb;border-radius:15px;box-shadow:0 6px 25px #142b3f0c}h1,h2,h3{color:#142b3f;line-height:1.2;letter-spacing:-.025em}h1{font-size:36px}h2{font-size:24px;margin-top:40px;padding-top:15px;border-top:1px solid #e2ecee}h3{font-size:18px;margin-top:25px}a{color:#078d91;text-underline-offset:3px}p{margin:14px 0}table{border-collapse:collapse;width:100%;margin:20px 0;font-size:13px;overflow-x:auto;display:block}th,td{text-align:left;padding:10px 12px;border-bottom:1px solid #e4eded;vertical-align:top}th{background:#f0f7f6;color:#285d65;font-size:12px}blockquote{margin:20px 0;border-left:3px solid #078d91;padding:5px 15px;background:#f1f8f7}code{font:13px/1.55 ui-monospace,monospace;background:#edf3f5;border-radius:4px;padding:2px 5px}pre{background:#eaf2f5;padding:17px;border-radius:8px;overflow-x:auto}pre code{padding:0}li{margin:6px 0}strong{color:#163247}footer{color:#697b86;font-size:12px;margin:20px 0}.wrap{width:min(94%,1000px);margin:auto}@media(max-width:650px){main{padding:23px 20px;margin:15px 10px}h1{font-size:29px}h2{font-size:22px}}
+</style></head><body><header><div class="wrap"><a href="./index.html">← NZ Education Insights · Interactive Dashboard</a></div></header><main><h1>Data Validation &amp; Limitations</h1>
+<p><strong>Validation run:</strong> 11 November 2026<br />
+<strong>Status:</strong> Validated aggregates and reproducible checks; no causal / individual-level inferences.</p>
+<h2>1. Input provenance</h2>
+<table>
+<thead>
+<tr>
+  <th>Input</th>
+  <th>Official source</th>
+  <th>User-provided file / handling</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Term 2 regular attendance</td>
+  <td>Education Counts, <em>2022–2026 Attendance data</em></td>
+  <td><code>Regular-attendance-data-2022-2026-Term2.xlsx</code>; extract <code>Regional Council</code> worksheet using the documented 2022–2026 Term 2 filter.</td>
+</tr>
+<tr>
+  <td>NCEA school-leaver outcomes</td>
+  <td>Education Counts, <em>Machine-readable: School leavers (2015–2025)</em></td>
+  <td><code>Machine-readable-school-leavers-2015-2025.zip</code> containing one UTF-8 CSV, source kept outside the published repository.</td>
+</tr>
+<tr>
+  <td>Time series supporting cross-check</td>
+  <td>Education Counts, <em>NCEA Level 2 or above (2015–2025)</em></td>
+  <td><code>Time-series-School-leavers-NCEA-Level-2-2025.xlsx</code>; 2025 national and regional aggregates agree with reconstructed CSV data.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Geographic unit:</strong> <code>Regional Council</code>; no mixing with Ministry's <code>Education Region</code> dimension.</p>
+<h2>2. Attendance source checks</h2>
+<ul>
+<li><strong>90</strong> validated Term 2 records = <strong>16 Regional Councils × 5 years (80)</strong> plus <strong>national <code>All</code> × 5</strong> and <strong><code>Area Outside</code> × 5</strong>.</li>
+<li><code>year + region</code> keys are unique. No missing combinations for the 16 councils in 2022–2026.</li>
+<li>All <code>regular_students &lt;= students</code> and nonnegative; published <code>% regular</code> agrees with <code>100 × regular_students / students</code> to within <strong>0.07 pp</strong> rounding tolerance.</li>
+<li>For every year, sum of <strong>16 councils + Area Outside</strong> equals the <strong>national <code>All</code></strong> for both student denominators and regular-attendance numerators.</li>
+<li>National percentages 2022–2026: <strong>39.6%, 47.0%, 53.4%, 58.4%, 64.3%</strong>.</li>
+<li>Raw workbook contains other terms and other metrics; only <strong>Term 2</strong>, <strong>Regional Council</strong>, and the <strong>regular attendance</strong> measure are selected. Source year-specific revisions and 2025 reporting changes matter.</li>
+</ul>
+<h2>3. School-leaver machine-readable ZIP checks</h2>
+<ul>
+<li>ZIP contains one UTF-8 CSV with <strong>28 columns</strong> and <strong>365,292 aggregate data records</strong> for 2015–2025; <strong>35,889</strong> of those rows are dated 2025. Rows represent combinations of source dimensions, <strong>not individual people</strong>.</li>
+<li>Required fields checked: <code>Year: Left School</code>, <code>Region: Regional Council</code>, <code>Student: Ethnic Group</code>, <code>Student: Age (Retention To 17)</code>, <code>School: Equity Index Group</code>, <code>Qualification: Level 2 or Above</code>, <code>Students (∑ Values)</code>.</li>
+<li>Source <code>Qualification: Level 2 or Above</code> contains the two expected mutually exclusive statuses: <code>NCEA Level 2 or above</code> and <code>Below NCEA Level 2</code>.</li>
+<li>For unique denominators use <strong><code>Student: Ethnic Group = All Leavers</code></strong>. Never sum all the ethnicity rows together: the source also contains overlapping named ethnicity categories.</li>
+<li>For each of the 16 regions in 2025, age buckets reconcile to total leavers, and EQI buckets (<code>Fewer</code>, <code>Moderate</code>, <code>More</code>, <code>Unassigned</code>) reconcile to total leavers. All regions have results across 2019–2025.</li>
+</ul>
+<h3>2025 reconciliation</h3>
+<table>
+<thead>
+<tr>
+  <th>Coverage</th>
+  <th style="text-align:right">School leavers</th>
+  <th style="text-align:right">NCEA Level 2+ achieved</th>
+  <th style="text-align:right">Attainment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>16 attributable Regional Councils</td>
+  <td style="text-align:right"><strong>64,741</strong></td>
+  <td style="text-align:right"><strong>52,502</strong></td>
+  <td style="text-align:right"><strong>81.10%</strong> (calculated)</td>
+</tr>
+<tr>
+  <td><code>Regional Council = Not Applicable</code></td>
+  <td style="text-align:right"><strong>6,045</strong></td>
+  <td style="text-align:right"><strong>2,560</strong></td>
+  <td style="text-align:right"><strong>42.35%</strong></td>
+</tr>
+<tr>
+  <td><strong>All NZ</strong></td>
+  <td style="text-align:right"><strong>70,786</strong></td>
+  <td style="text-align:right"><strong>55,062</strong></td>
+  <td style="text-align:right"><strong>77.79% → 77.8% published</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The all-NZ total is <strong>not equal</strong> to the sum of 16 region totals unless <code>Not Applicable</code> is included. The national official benchmark <strong>77.8%</strong> is used in the public quadrant and ranking. The region-attributable <strong>81.1%</strong> is used only as a transparent, like-for-like 16-region pool for subgroup diagnostics; it is <strong>not represented as the official national benchmark</strong>.</p>
+<h2>4. Join validation</h2>
+<ul>
+<li><code>attendance_2025(Regional Council)</code> joined <strong>one-to-one</strong> with <code>ncea_2025(Regional Council)</code> for <strong>16</strong> councils. No duplicate or missing region keys.</li>
+<li>2026 attendance remains a standalone current participation view and is <strong>never joined</strong> to a 2026 NCEA rate (not yet published).</li>
+<li>Historical annual gaps compare each region to its <strong>corresponding-year</strong> national rate, not the latest national rate.</li>
+<li>Classification around 0 pp is descriptive; regions at 0.0 pp (e.g. Nelson 2025 attendance at published precision) are labelled <em>at baseline</em> rather than assigned arbitrarily.</li>
+</ul>
+<h2>5. Limitations, sensitivity and responsible use</h2>
+<ul>
+<li><strong>Cohort mismatch:</strong> Term 2 enrolled-student attendance and annual school-leaver qualifications refer to different student groups.</li>
+<li><strong>Small cohorts:</strong> Some region × ethnic / EQI cells are small; the public subgroup explorer withholds <code>n&lt;30</code> rates. Larger n does not remove confounding or cross-year volatility.</li>
+<li><strong>Ethnicity is total-response:</strong> learners can appear in multiple groups. Their rows are not mutually exclusive.</li>
+<li><strong>School EQI measures average barriers:</strong> it cannot diagnose any individual learner's socioeconomic condition or a school's teaching effectiveness.</li>
+<li><strong>Measurement changes:</strong> The 2025 attendance coding/reporting changes and NCEA programme rules can affect long-term comparability.</li>
+<li><strong>Geographic sensitivity:</strong> the unusually low NCEA attainment of <code>Not Applicable</code> leavers shifts the all-NZ reference downward. Apparent slight positive outliers can reverse using the pooled 16-region reference. This sensitivity is documented rather than cluttering the main graphic.</li>
+<li><strong>Noncausal:</strong> no intervention effect, driver ranking, matched-cohort correlation, or statistical significance claim is made.</li>
+<li><strong>Source maintenance:</strong> Revalidate if the Ministry publishes revisions; the extracted CSV and JSON reflect the named uploads as at 11 November 2026.</li>
+</ul>
+<h2>6. Automated validation / outputs</h2>
+<ul>
+<li><code>python src/extract_attendance.py</code> — source XLSX field, missing-key, duplicate, rounded-rate and national-count reconciliation (requires <code>artifact_tool</code>).</li>
+<li><code>python src/build_analysis.py</code> — source ZIP schema / categories, 365,292 source row checks, unique leaver counts, regional / group reconciliations, 2019–2025 outcome trends.</li>
+<li><code>python src/render_site.py</code> — builds a self-contained interactive <code>docs/index.html</code> from <code>outputs/dashboard_data.json</code>.</li>
+<li><code>python src/verify_sql.py</code> — verifies SQL and one-to-one region joins using independent SQLite queries.</li>
+<li><code>python -m unittest discover -s tests -v</code> — regression tests over published data and generated site.</li>
+</ul>
+<p>Data extracts and JSON are published under <code>data/verified</code> / <code>outputs</code>. Original official source binaries are <strong>excluded</strong>, with authoritative source URLs documented in <a href="SOURCES.md">SOURCES.md</a>.</p>
+<footer>Independent education analytics portfolio · Data as of 11 November 2026 · Source: Education Counts / Ministry of Education</footer></main></body></html>
