@@ -1,0 +1,184 @@
+region,dimension,group,n,achieved,rate,pooledRate,pooledN,differencePp,compositionShare,smallCell
+Auckland,eqi,Fewer,8389,7755,92.44,91.79,16032,0.66,37.18,False
+Auckland,eqi,Moderate,8551,7021,82.11,80.14,33275,1.96,37.9,False
+Auckland,eqi,More,3592,2531,70.46,66.86,11544,3.6,15.92,False
+Auckland,eqi,Unassigned,2029,1931,95.17,87.43,3890,7.74,8.99,False
+Auckland,age,Left before 17th birthday,2514,493,19.61,23.38,10595,-3.77,11.14,False
+Auckland,age,Stayed until age 17 or above,20047,18745,93.51,92.39,54146,1.12,88.86,False
+Auckland,ethnicity,Māori,3409,2407,70.61,67.55,15828,3.06,,False
+Auckland,ethnicity,Pacific,5558,4259,76.63,75.09,8911,1.54,,False
+Auckland,ethnicity,European/Pākehā,10009,8916,89.08,83.54,39409,5.54,,False
+Auckland,ethnicity,Asian,7067,6359,89.98,89.01,11887,0.97,,False
+Auckland,ethnicity,MELAA,824,694,84.22,79.59,1720,4.63,,False
+Auckland,ethnicity,Other,272,244,89.71,86.1,698,3.6,,False
+Bay of Plenty,eqi,Fewer,426,401,94.13,91.79,16032,2.35,9.98,False
+Bay of Plenty,eqi,Moderate,2544,2045,80.39,80.14,33275,0.24,59.59,False
+Bay of Plenty,eqi,More,1238,842,68.01,66.86,11544,1.16,29.0,False
+Bay of Plenty,eqi,Unassigned,61,46,75.41,87.43,3890,-12.02,1.43,False
+Bay of Plenty,age,Left before 17th birthday,971,259,26.67,23.38,10595,3.29,22.75,False
+Bay of Plenty,age,Stayed until age 17 or above,3298,3075,93.24,92.39,54146,0.85,77.25,False
+Bay of Plenty,ethnicity,Māori,1845,1249,67.7,67.55,15828,0.15,,False
+Bay of Plenty,ethnicity,Pacific,288,206,71.53,75.09,8911,-3.56,,False
+Bay of Plenty,ethnicity,European/Pākehā,2661,2168,81.47,83.54,39409,-2.07,,False
+Bay of Plenty,ethnicity,Asian,384,349,90.89,89.01,11887,1.87,,False
+Bay of Plenty,ethnicity,MELAA,48,39,81.25,79.59,1720,1.66,,False
+Bay of Plenty,ethnicity,Other,38,29,76.32,86.1,698,-9.79,,False
+Canterbury,eqi,Fewer,2545,2313,90.88,91.79,16032,-0.9,30.98,False
+Canterbury,eqi,Moderate,4414,3331,75.46,80.14,33275,-4.68,53.74,False
+Canterbury,eqi,More,443,266,60.05,66.86,11544,-6.81,5.39,False
+Canterbury,eqi,Unassigned,812,628,77.34,87.43,3890,-10.09,9.89,False
+Canterbury,age,Left before 17th birthday,1343,319,23.75,23.38,10595,0.37,16.35,False
+Canterbury,age,Stayed until age 17 or above,6871,6219,90.51,92.39,54146,-1.88,83.65,False
+Canterbury,ethnicity,Māori,1366,878,64.28,67.55,15828,-3.28,,False
+Canterbury,ethnicity,Pacific,549,371,67.58,75.09,8911,-7.51,,False
+Canterbury,ethnicity,European/Pākehā,6191,5024,81.15,83.54,39409,-2.39,,False
+Canterbury,ethnicity,Asian,1249,1085,86.87,89.01,11887,-2.14,,False
+Canterbury,ethnicity,MELAA,186,131,70.43,79.59,1720,-9.16,,False
+Canterbury,ethnicity,Other,74,60,81.08,86.1,698,-5.02,,False
+Gisborne,eqi,Moderate,392,292,74.49,80.14,33275,-5.65,58.86,False
+Gisborne,eqi,More,271,163,60.15,66.86,11544,-6.71,40.69,False
+Gisborne,eqi,Unassigned,,,,87.43,3890,,,True
+Gisborne,age,Left before 17th birthday,197,46,23.35,23.38,10595,-0.03,29.58,False
+Gisborne,age,Stayed until age 17 or above,469,410,87.42,92.39,54146,-4.97,70.42,False
+Gisborne,ethnicity,Māori,446,267,59.87,67.55,15828,-7.69,,False
+Gisborne,ethnicity,Pacific,42,26,61.9,75.09,8911,-13.18,,False
+Gisborne,ethnicity,European/Pākehā,274,230,83.94,83.54,39409,0.4,,False
+Gisborne,ethnicity,Asian,30,25,83.33,89.01,11887,-5.68,,False
+Gisborne,ethnicity,MELAA,,,,79.59,1720,,,True
+Gisborne,ethnicity,Other,,,,86.1,698,,,True
+Hawke's Bay,eqi,Fewer,223,216,96.86,91.79,16032,5.08,9.42,False
+Hawke's Bay,eqi,Moderate,1365,1125,82.42,80.14,33275,2.27,57.67,False
+Hawke's Bay,eqi,More,751,484,64.45,66.86,11544,-2.41,31.73,False
+Hawke's Bay,eqi,Unassigned,,,,87.43,3890,,,True
+Hawke's Bay,age,Left before 17th birthday,501,111,22.16,23.38,10595,-1.22,21.17,False
+Hawke's Bay,age,Stayed until age 17 or above,1866,1724,92.39,92.39,54146,0.0,78.83,False
+Hawke's Bay,ethnicity,Māori,914,604,66.08,67.55,15828,-1.47,,False
+Hawke's Bay,ethnicity,Pacific,183,136,74.32,75.09,8911,-0.77,,False
+Hawke's Bay,ethnicity,European/Pākehā,1576,1303,82.68,83.54,39409,-0.86,,False
+Hawke's Bay,ethnicity,Asian,171,150,87.72,89.01,11887,-1.29,,False
+Hawke's Bay,ethnicity,MELAA,31,23,74.19,79.59,1720,-5.4,,False
+Hawke's Bay,ethnicity,Other,,,,86.1,698,,,True
+Manawatū-Whanganui,eqi,Fewer,132,123,93.18,91.79,16032,1.4,4.19,False
+Manawatū-Whanganui,eqi,Moderate,2111,1686,79.87,80.14,33275,-0.28,66.93,False
+Manawatū-Whanganui,eqi,More,824,584,70.87,66.86,11544,4.02,26.13,False
+Manawatū-Whanganui,eqi,Unassigned,87,25,28.74,87.43,3890,-58.69,2.76,False
+Manawatū-Whanganui,age,Left before 17th birthday,597,132,22.11,23.38,10595,-1.27,18.93,False
+Manawatū-Whanganui,age,Stayed until age 17 or above,2557,2286,89.4,92.39,54146,-2.99,81.07,False
+Manawatū-Whanganui,ethnicity,Māori,1113,759,68.19,67.55,15828,0.64,,False
+Manawatū-Whanganui,ethnicity,Pacific,256,176,68.75,75.09,8911,-6.34,,False
+Manawatū-Whanganui,ethnicity,European/Pākehā,2175,1731,79.59,83.54,39409,-3.95,,False
+Manawatū-Whanganui,ethnicity,Asian,285,241,84.56,89.01,11887,-4.45,,False
+Manawatū-Whanganui,ethnicity,MELAA,55,39,70.91,79.59,1720,-8.68,,False
+Manawatū-Whanganui,ethnicity,Other,,,,86.1,698,,,True
+Marlborough,eqi,Moderate,507,374,73.77,80.14,33275,-6.38,100.0,False
+Marlborough,age,Left before 17th birthday,123,33,26.83,23.38,10595,3.45,24.26,False
+Marlborough,age,Stayed until age 17 or above,384,341,88.8,92.39,54146,-3.59,75.74,False
+Marlborough,ethnicity,Māori,127,81,63.78,67.55,15828,-3.77,,False
+Marlborough,ethnicity,Pacific,41,28,68.29,75.09,8911,-6.79,,False
+Marlborough,ethnicity,European/Pākehā,414,308,74.4,83.54,39409,-9.14,,False
+Marlborough,ethnicity,Asian,34,28,82.35,89.01,11887,-6.66,,False
+Marlborough,ethnicity,MELAA,,,,79.59,1720,,,True
+Marlborough,ethnicity,Other,,,,86.1,698,,,True
+Nelson,eqi,Fewer,113,91,80.53,91.79,16032,-11.25,13.87,False
+Nelson,eqi,Moderate,697,565,81.06,80.14,33275,0.92,85.52,False
+Nelson,eqi,Unassigned,,,,87.43,3890,,,True
+Nelson,age,Left before 17th birthday,162,49,30.25,23.38,10595,6.87,19.88,False
+Nelson,age,Stayed until age 17 or above,653,610,93.42,92.39,54146,1.03,80.12,False
+Nelson,ethnicity,Māori,160,119,74.38,67.55,15828,6.82,,False
+Nelson,ethnicity,Pacific,45,34,75.56,75.09,8911,0.47,,False
+Nelson,ethnicity,European/Pākehā,660,541,81.97,83.54,39409,-1.57,,False
+Nelson,ethnicity,Asian,83,66,79.52,89.01,11887,-9.5,,False
+Nelson,ethnicity,MELAA,,,,79.59,1720,,,True
+Nelson,ethnicity,Other,,,,86.1,698,,,True
+Northland,eqi,Fewer,83,77,92.77,91.79,16032,0.99,3.69,False
+Northland,eqi,Moderate,1102,829,75.23,80.14,33275,-4.92,48.98,False
+Northland,eqi,More,978,646,66.05,66.86,11544,-0.8,43.47,False
+Northland,eqi,Unassigned,87,70,80.46,87.43,3890,-6.97,3.87,False
+Northland,age,Left before 17th birthday,610,139,22.79,23.38,10595,-0.59,27.11,False
+Northland,age,Stayed until age 17 or above,1640,1483,90.43,92.39,54146,-1.96,72.89,False
+Northland,ethnicity,Māori,1185,746,62.95,67.55,15828,-4.6,,False
+Northland,ethnicity,Pacific,164,116,70.73,75.09,8911,-4.36,,False
+Northland,ethnicity,European/Pākehā,1368,1071,78.29,83.54,39409,-5.25,,False
+Northland,ethnicity,Asian,118,96,81.36,89.01,11887,-7.66,,False
+Northland,ethnicity,MELAA,,,,79.59,1720,,,True
+Northland,ethnicity,Other,,,,86.1,698,,,True
+Otago,eqi,Fewer,698,651,93.27,91.79,16032,1.48,23.39,False
+Otago,eqi,Moderate,2167,1812,83.62,80.14,33275,3.47,72.62,False
+Otago,eqi,More,111,68,61.26,66.86,11544,-5.6,3.72,False
+Otago,eqi,Unassigned,,,,87.43,3890,,,True
+Otago,age,Left before 17th birthday,439,123,28.02,23.38,10595,4.64,14.71,False
+Otago,age,Stayed until age 17 or above,2545,2408,94.62,92.39,54146,2.23,85.29,False
+Otago,ethnicity,Māori,453,343,75.72,67.55,15828,8.17,,False
+Otago,ethnicity,Pacific,162,132,81.48,75.09,8911,6.39,,False
+Otago,ethnicity,European/Pākehā,2360,2022,85.68,83.54,39409,2.14,,False
+Otago,ethnicity,Asian,315,283,89.84,89.01,11887,0.83,,False
+Otago,ethnicity,MELAA,93,69,74.19,79.59,1720,-5.4,,False
+Otago,ethnicity,Other,,,,86.1,698,,,True
+Southland,eqi,Moderate,1161,947,81.57,80.14,33275,1.42,88.02,False
+Southland,eqi,More,150,67,44.67,66.86,11544,-22.19,11.37,False
+Southland,eqi,Unassigned,,,,87.43,3890,,,True
+Southland,age,Left before 17th birthday,285,65,22.81,23.38,10595,-0.57,21.61,False
+Southland,age,Stayed until age 17 or above,1034,953,92.17,92.39,54146,-0.22,78.39,False
+Southland,ethnicity,Māori,359,240,66.85,67.55,15828,-0.7,,False
+Southland,ethnicity,Pacific,77,55,71.43,75.09,8911,-3.66,,False
+Southland,ethnicity,European/Pākehā,986,771,78.19,83.54,39409,-5.34,,False
+Southland,ethnicity,Asian,131,114,87.02,89.01,11887,-1.99,,False
+Southland,ethnicity,MELAA,,,,79.59,1720,,,True
+Southland,ethnicity,Other,,,,86.1,698,,,True
+Taranaki,eqi,Fewer,212,201,94.81,91.79,16032,3.03,13.31,False
+Taranaki,eqi,Moderate,942,747,79.3,80.14,33275,-0.84,59.13,False
+Taranaki,eqi,More,428,318,74.3,66.86,11544,7.44,26.87,False
+Taranaki,eqi,Unassigned,,,,87.43,3890,,,True
+Taranaki,age,Left before 17th birthday,368,124,33.7,23.38,10595,10.32,23.1,False
+Taranaki,age,Stayed until age 17 or above,1225,1144,93.39,92.39,54146,1.0,76.9,False
+Taranaki,ethnicity,Māori,503,344,68.39,67.55,15828,0.84,,False
+Taranaki,ethnicity,Pacific,73,55,75.34,75.09,8911,0.26,,False
+Taranaki,ethnicity,European/Pākehā,1247,1016,81.48,83.54,39409,-2.06,,False
+Taranaki,ethnicity,Asian,112,97,86.61,89.01,11887,-2.41,,False
+Taranaki,ethnicity,MELAA,32,29,90.62,79.59,1720,11.03,,False
+Taranaki,ethnicity,Other,,,,86.1,698,,,True
+Tasman,eqi,Moderate,573,418,72.95,80.14,33275,-7.19,96.95,False
+Tasman,eqi,More,,,,66.86,11544,,,True
+Tasman,age,Left before 17th birthday,135,23,17.04,23.38,10595,-6.34,22.84,False
+Tasman,age,Stayed until age 17 or above,456,407,89.25,92.39,54146,-3.13,77.16,False
+Tasman,ethnicity,Māori,94,58,61.7,67.55,15828,-5.85,,False
+Tasman,ethnicity,Pacific,,,,75.09,8911,,,True
+Tasman,ethnicity,European/Pākehā,522,383,73.37,83.54,39409,-10.17,,False
+Tasman,ethnicity,Asian,31,24,77.42,89.01,11887,-11.59,,False
+Tasman,ethnicity,MELAA,,,,79.59,1720,,,True
+Tasman,ethnicity,Other,,,,86.1,698,,,True
+Waikato,eqi,Fewer,378,342,90.48,91.79,16032,-1.31,5.65,False
+Waikato,eqi,Moderate,3995,3185,79.72,80.14,33275,-0.42,59.72,False
+Waikato,eqi,More,1926,1176,61.06,66.86,11544,-5.8,28.79,False
+Waikato,eqi,Unassigned,390,361,92.56,87.43,3890,5.13,5.83,False
+Waikato,age,Left before 17th birthday,1510,366,24.24,23.38,10595,0.86,22.57,False
+Waikato,age,Stayed until age 17 or above,5179,4698,90.71,92.39,54146,-1.68,77.43,False
+Waikato,ethnicity,Māori,2369,1504,63.49,67.55,15828,-4.06,,False
+Waikato,ethnicity,Pacific,534,371,69.48,75.09,8911,-5.61,,False
+Waikato,ethnicity,European/Pākehā,4332,3416,78.86,83.54,39409,-4.68,,False
+Waikato,ethnicity,Asian,837,737,88.05,89.01,11887,-0.96,,False
+Waikato,ethnicity,MELAA,140,105,75.0,79.59,1720,-4.59,,False
+Waikato,ethnicity,Other,46,37,80.43,86.1,698,-5.67,,False
+Wellington,eqi,Fewer,2833,2545,89.83,91.79,16032,-1.95,44.23,False
+Wellington,eqi,Moderate,2412,2053,85.12,80.14,33275,4.97,37.66,False
+Wellington,eqi,More,802,549,68.45,66.86,11544,1.6,12.52,False
+Wellington,eqi,Unassigned,358,318,88.83,87.43,3890,1.4,5.59,False
+Wellington,age,Left before 17th birthday,724,157,21.69,23.38,10595,-1.69,11.3,False
+Wellington,age,Stayed until age 17 or above,5681,5308,93.43,92.39,54146,1.05,88.7,False
+Wellington,ethnicity,Māori,1408,1042,74.01,67.55,15828,6.45,,False
+Wellington,ethnicity,Pacific,908,706,77.75,75.09,8911,2.67,,False
+Wellington,ethnicity,European/Pākehā,4327,3809,88.03,83.54,39409,4.49,,False
+Wellington,ethnicity,Asian,1021,910,89.13,89.01,11887,0.12,,False
+Wellington,ethnicity,MELAA,230,180,78.26,79.59,1720,-1.33,,False
+Wellington,ethnicity,Other,121,112,92.56,86.1,698,6.46,,False
+West Coast,eqi,Moderate,342,238,69.59,80.14,33275,-10.55,95.8,False
+West Coast,eqi,More,,,,66.86,11544,,,True
+West Coast,eqi,Unassigned,,,,87.43,3890,,,True
+West Coast,age,Left before 17th birthday,116,38,32.76,23.38,10595,9.38,32.49,False
+West Coast,age,Stayed until age 17 or above,241,214,88.8,92.39,54146,-3.59,67.51,False
+West Coast,ethnicity,Māori,77,51,66.23,67.55,15828,-1.32,,False
+West Coast,ethnicity,Pacific,,,,75.09,8911,,,True
+West Coast,ethnicity,European/Pākehā,307,213,69.38,83.54,39409,-14.16,,False
+West Coast,ethnicity,Asian,,,,89.01,11887,,,True
+West Coast,ethnicity,MELAA,,,,79.59,1720,,,True
+West Coast,ethnicity,Other,,,,86.1,698,,,True

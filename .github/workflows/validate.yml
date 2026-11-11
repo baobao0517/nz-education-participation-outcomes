@@ -1,0 +1,20 @@
+name: Validate portfolio
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Check built artifacts and transformations
+        run: |
+          python src/render_site.py
+          python -m unittest discover -s tests -v
+          python src/verify_sql.py
