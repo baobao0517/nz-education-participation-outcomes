@@ -1,0 +1,24 @@
+{
+  "source_attendance_rows": 90,
+  "source_ncea_raw_rows": 365292,
+  "source_ncea_2025_rows": 35889,
+  "regional_councils": 16,
+  "regional_attendance_rows": 80,
+  "regional_ncea_rows_2019_2025": 112,
+  "ncea_2025_national_leavers": 70786,
+  "ncea_2025_national_attaining": 55062,
+  "ncea_2025_region_attributed_leavers": 64741,
+  "ncea_2025_region_attributed_attaining": 52502,
+  "ncea_2025_unattributed_leavers": 6045,
+  "ncea_2025_unattributed_attaining": 2560,
+  "ncea_2025_all_nz_pct": 77.79,
+  "ncea_2025_attributed_regions_pct": 81.1,
+  "checks": [
+    "2022–2026 Term 2 source shares match counted regular students (±0.07pp publication rounding)",
+    "Each year 16 regions + Area Outside attendance counts reconcile exactly to national All",
+    "School leaver All Leavers only for unique counts; ethnicity groups separately parsed",
+    "2025 school leaver national totals and regions + Not Applicable reconcile exactly",
+    "2025 EQI and age buckets reconcile to each region distinct leaver total",
+    "No region/year duplicates in attendance; all 16 regions represented 2019–2025 NCEA"
+  ]
+}
