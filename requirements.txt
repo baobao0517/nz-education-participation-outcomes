@@ -1,0 +1,3 @@
+# Dashboard rendering, ZIP parsing, SQL and tests run with the Python 3.10+ standard library.
+# Reading the original official Excel in src/extract_attendance.py requires
+# artifact_tool (OpenAI spreadsheet runtime). A validated CSV extract is provided.
